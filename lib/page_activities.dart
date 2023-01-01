@@ -84,6 +84,8 @@ class _PageActivitiesState extends State<PageActivities> {
         } else if (nasm == NewActivitySendMode.task) {
           requests.newTask(widget.id, _activityNameController.text);
         }
+        Navigator.of(context).pop();
+        _activityNameController.text = "";
       },
       child: const Text("Send"),
     );
